@@ -1,0 +1,207 @@
+{
+  "version": 1,
+  "skills": {
+    "accessibility": {
+      "source": "addyosmani/web-quality-skills",
+      "sourceType": "github",
+      "computedHash": "3f390c14d09ca45da332b6c421b3195d12da099ec24ee549f80e666ec48dc89b"
+    },
+    "adapt": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "computedHash": "da0d3fef219577871a36854e6f9163a3068ffce6d808a691ede86cdd7020e254"
+    },
+    "agent-browser": {
+      "source": "vercel-labs/agent-browser",
+      "sourceType": "github",
+      "skillPath": "skills/agent-browser/SKILL.md",
+      "computedHash": "c19a532a3777698b80b35270939a1dc559da451381971b3e1e78174d1ab54863"
+    },
+    "animate": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "computedHash": "124b6a70df6586772835204cc9bba5dfd1263902b0f6f22db66d66706312853e"
+    },
+    "arrange": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "computedHash": "fe13d5cdacfd89a4f7e4be930b58ad006b4f146159d1cd1c1ea4c925d9fc00e6"
+    },
+    "audit": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "computedHash": "fa7754330d2e9e72e6fcba364178738f1050fc75ae983f5997f630f75ef392ad"
+    },
+    "best-practices": {
+      "source": "addyosmani/web-quality-skills",
+      "sourceType": "github",
+      "computedHash": "f5d58f0adf9cc9646b35daf2241377e1ad7b8ab094e54c9792a826af1e0dca5b"
+    },
+    "bolder": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "computedHash": "3cab0d19799ccfc3f0f6297ad3b1a49bb97627c477d9ddaf6544d77f40dc0724"
+    },
+    "clarify": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "computedHash": "cf789ca42a993fac1f1dc0bfc0d97328d798573705e3d3d3d3c38172708a204f"
+    },
+    "colorize": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "computedHash": "ac62348a5786ceb057509a2e9b44f4dced7540476be89217eb1a732c406de561"
+    },
+    "core-web-vitals": {
+      "source": "addyosmani/web-quality-skills",
+      "sourceType": "github",
+      "computedHash": "466ba01941037ddc0b519273035eae1e1f591019bdeb0fd83cd8786c53a07f89"
+    },
+    "critique": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "computedHash": "073cfe05d48b725986ace8647e5f8c43fb2b7192518b1f5aa7d0a6a679dd0f8f"
+    },
+    "delight": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "computedHash": "aaa0908311fcfd22b2587e7008b430de7d8db6933db0166a7a6c6ebe7d2b6168"
+    },
+    "distill": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "computedHash": "bfb25784f2b49c625e0f2f9236071a7854adf6fb002696f109ffe87739b62c96"
+    },
+    "extract": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "computedHash": "35862644f6bbc2cca3a95d6d5c527cc75d6b1b178e64ab551ce0960d5e23be12"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "computedHash": "9e1c8b3103f92fa8092568a44fe64858de7c5c9dc65ce4bea8f168080e889cfd"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "computedHash": "516bd2154eb843a8240e43d5b285229129853114ad7075a5e141e1c08e408c84"
+    },
+    "harden": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "computedHash": "041823956988fc6d53e585a266ff0df3e5cc92200d98486b142c0cfd41131a8b"
+    },
+    "impeccable": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/impeccable/SKILL.md",
+      "computedHash": "4087a21d0634e89cf7e7fadc81fb19aecb4b41ba4850cf35be32ddb87258b9ca"
+    },
+    "improve": {
+      "source": "shadcn/improve",
+      "sourceType": "github",
+      "skillPath": "skills/improve/SKILL.md",
+      "computedHash": "992d71e2ed2a83e7f25d8522d069f090e2ea16286ec29ea86f84cfa05c0c2430"
+    },
+    "normalize": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "computedHash": "dc820af2dfeef81b80951d936300b1a97252ffc9dd34236e6f4082bdee137baa"
+    },
+    "onboard": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "computedHash": "87222f3b579a228df662345cdd9059510a6a7dab31d7ec0e713338a0c157fa86"
+    },
+    "optimize": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "computedHash": "d2ed7755a615b3a52e7f9abaed58696c706c84727bf626e5632bf708be516a16"
+    },
+    "overdrive": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "computedHash": "a59d87767099dc74bb08b7e3e0eac8c929f3daef64f241f0991ac603c574edd8"
+    },
+    "performance": {
+      "source": "addyosmani/web-quality-skills",
+      "sourceType": "github",
+      "computedHash": "9e0e29b7919bacfd2d0caae0f841fa53ae3d7b7427d27f4fdbacc76643d7d138"
+    },
+    "polish": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "computedHash": "06b69554048c8bf992e049e6b9e6cbd6c4f8ef2250065cb089cecf97372020cb"
+    },
+    "quieter": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "computedHash": "529161d734da8508d68924f326bb5f4b9942683d0a3aed5dcc2b1e43245e2856"
+    },
+    "remotion-best-practices": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion/SKILL.md",
+      "computedHash": "d065c5fd363002cc8f8c1172a7eaf35df42fccfc149fb5149f8d3e608645c47f"
+    },
+    "seo": {
+      "source": "addyosmani/web-quality-skills",
+      "sourceType": "github",
+      "computedHash": "680cc12a17e9308b4592a2751db51615c618993f75362cb8e64207f6355a8c63"
+    },
+    "skill-creator": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/skill-creator/SKILL.md",
+      "computedHash": "7e3c9cd74e9e2b4828527a857170e86310f2dab5ea8030a9043df2c7e6c88857"
+    },
+    "supabase-postgres-best-practices": {
+      "source": "supabase/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/supabase-postgres-best-practices/SKILL.md",
+      "computedHash": "8e41c7417894e6f394614ee7ca3ee5322b1e58d890255d441f42dea98732597f"
+    },
+    "teach-impeccable": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "computedHash": "e95d2bb071e0d1877d291a421ce93165e3c75ebc010a46e8070eab53a9f90fd9"
+    },
+    "typeset": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "computedHash": "146bb7705cf1a4439b2195baac5628f80bbc39ab4f06cd9415fec466da0a52cb"
+    },
+    "ui-ux-pro-max": {
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/ui-ux-pro-max/SKILL.md",
+      "computedHash": "6337038fe1fe6bbe1b9f252ab678ee575859190bab6f0f246f4061824eb40875"
+    },
+    "vercel-composition-patterns": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/composition-patterns/SKILL.md",
+      "computedHash": "575757e3e25761c8c562d6e395d29f0b76c98b1273c0bd72d88e6ab1bc9c7d42"
+    },
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "computedHash": "ca7b0c0c6e5f2750043f7f0cd72d16ac4e2abc48f9b5500d047a4b77a2506212"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "computedHash": "f3bc47f890f42a44db1007ab390709ec368e4b8c089baee6b0007182236ac474"
+    },
+    "web-quality-audit": {
+      "source": "addyosmani/web-quality-skills",
+      "sourceType": "github",
+      "computedHash": "04aeec0ff9071fc9cfb5b848a25946f8ca8586c842e50da4c1abbba8ceeaec40"
+    }
+  }
+}

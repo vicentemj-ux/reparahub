@@ -1,0 +1,17 @@
+﻿      {/* Contenedor oculto para Tauri raster (fuera de viewport pero opacity:1 para que html-to-image capture bien) */}
+      <div
+        ref={hiddenRef}
+        style={{ position: "fixed", left: -9999, top: 0, width: "80mm", opacity: 1, pointerEvents: "none", zIndex: -1 }}
+        aria-hidden
+      >
+        <PosSaleTicket
+          data={mapVentaToTicketData(venta)}
+          business={{
+            name: tallerNombre,
+            phone: tallerTelefono,
+            logoUrl: logoUrl ?? null,
+            terminosGarantia,
+            mensajeDespedida,
+          }}
+        />
+      </div>

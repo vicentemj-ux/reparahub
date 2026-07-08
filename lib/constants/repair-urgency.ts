@@ -1,0 +1,2 @@
+export const REPAIR_URGENCY_DAYS = 2
+export const REPAIR_URGENCY_MS = REPAIR_URGENCY_DAYS * 24 * 60 * 60 * 1000

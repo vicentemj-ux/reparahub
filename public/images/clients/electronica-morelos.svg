@@ -1,0 +1,29 @@
+<svg width="1024" height="320" viewBox="0 0 1024 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Electronica Morelos</title>
+  <desc id="desc">Logo vectorial con monograma EM y trazos de circuito en tonos azul y cian.</desc>
+  <rect width="1024" height="320" rx="32" fill="#061B33"/>
+  <rect x="48" y="40" width="274" height="240" rx="24" fill="#0B2545"/>
+  <path d="M112 238L112 102L171 102L171 138L147 138L147 162L176 162L176 194L147 194L147 238L112 238Z" fill="white"/>
+  <path d="M214 102H248L283 166L318 102H352V238H313V162L283 216H282L252 162V238H214V102Z" fill="white"/>
+  <path d="M92 144H66" stroke="#14B8C8" stroke-width="10" stroke-linecap="round"/>
+  <path d="M92 176H44" stroke="#14B8C8" stroke-width="10" stroke-linecap="round"/>
+  <path d="M92 208H66" stroke="#14B8C8" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="32" cy="176" r="12" stroke="#14B8C8" stroke-width="8"/>
+  <circle cx="60" cy="144" r="12" stroke="#14B8C8" stroke-width="8"/>
+  <circle cx="60" cy="208" r="12" stroke="#14B8C8" stroke-width="8"/>
+
+  <rect x="388" y="58" width="8" height="204" rx="4" fill="#10B6D8"/>
+  <text x="430" y="154" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="800" letter-spacing="3">ELECTRONICA</text>
+  <text x="430" y="218" fill="#8AD7E8" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700" letter-spacing="5">MORELOS</text>
+
+  <path d="M742 92H972" stroke="#0EA5E9" stroke-width="6" stroke-linecap="round"/>
+  <path d="M776 125H972" stroke="#0EA5E9" stroke-width="6" stroke-linecap="round"/>
+  <path d="M742 158H972" stroke="#0EA5E9" stroke-width="6" stroke-linecap="round"/>
+  <path d="M776 191H972" stroke="#0EA5E9" stroke-width="6" stroke-linecap="round"/>
+  <path d="M742 224H972" stroke="#0EA5E9" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="972" cy="92" r="9" fill="#0EA5E9"/>
+  <circle cx="972" cy="125" r="9" fill="#0EA5E9"/>
+  <circle cx="972" cy="158" r="9" fill="#0EA5E9"/>
+  <circle cx="972" cy="191" r="9" fill="#0EA5E9"/>
+  <circle cx="972" cy="224" r="9" fill="#0EA5E9"/>
+</svg>

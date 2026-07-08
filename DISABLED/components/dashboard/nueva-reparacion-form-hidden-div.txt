@@ -1,0 +1,41 @@
+﻿    {/* Hidden ticket for Tauri raster print (fuera de viewport pero opacity:1 para que html-to-image capture bien) */}
+    <div style={{ position: "fixed", left: -9999, top: 0, width: "80mm", opacity: 1, pointerEvents: "none", zIndex: -1 }}>
+      <RepairIntakeTicket
+        ref={hiddenTicketRef}
+        data={{
+          folio: successPayload?.folio || "",
+          date: new Date().toLocaleDateString("es-MX", {
+            year: "numeric", month: "long", day: "numeric",
+          }),
+          customerName: successPayload?.customerName || "",
+          customerPhone: successPayload?.customerPhone || "",
+          deviceType: successPayload?.tipo_equipo || tipo_equipo || undefined,
+          deviceBrand: successPayload?.deviceBrand || "",
+          deviceModel: successPayload?.deviceModel || "",
+          imei: imeiValue || undefined,
+          color: colorValue || undefined,
+          reportedFault: successPayload?.reportedFault || "",
+          estimatedPrice: successPayload?.estimatedPrice || undefined,
+          deposit: successPayload?.deposit || undefined,
+          repairId: successPayload?.repairId || "",
+          trackingUrl: successPayload?.repairId ? `${getPublicAppBaseUrl()}/track/${encodeURIComponent(successPayload.repairId)}` : undefined,
+          checklistIngreso: checklistIngreso ? {
+            ...checklistIngreso,
+            encendido: checklistIngreso.encendido ?? undefined,
+          } : undefined,
+          servicios: selectedServices.map((s) => ({ nombre: s.nombre, precio: s.precio, cantidad: s.cantidad })),
+        }}
+        business={{
+          name: shopSettings?.nombre_taller || "Mi Taller",
+          phone: shopSettings?.telefono || "",
+          logoUrl: shopSettings?.logo_url || null,
+          terminosGarantia: shopSettings?.terminos_garantia || undefined,
+          mensajeDespedida: shopSettings?.mensaje_despedida || undefined,
+        }}
+        options={{
+          mostrarLogo: true,
+          mostrarPrecios: true,
+          tecnicoNombre: selectedTechnician !== "Sin asignar" ? selectedTechnician : undefined,
+        }}
+      />
+    </div>

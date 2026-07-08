@@ -1,0 +1,485 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+:root {
+  --background: oklch(0.995 0 0);
+  --foreground: oklch(0.22 0.03 250);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.03 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.03 250);
+  --primary: oklch(0.55 0.22 255);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.95 0.02 170);
+  --secondary-foreground: oklch(0.25 0.04 170);
+  --muted: oklch(0.96 0.01 250);
+  --muted-foreground: oklch(0.48 0.02 250);
+  --accent: oklch(0.82 0.14 170);
+  --accent-foreground: oklch(0.2 0.04 170);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.92 0.01 250);
+  --input: oklch(0.92 0.01 250);
+  --ring: oklch(0.55 0.22 255);
+  --chart-1: oklch(0.55 0.22 255);
+  --chart-2: oklch(0.82 0.14 170);
+  --chart-3: oklch(0.4 0.06 250);
+  --chart-4: oklch(0.65 0.18 240);
+  --chart-5: oklch(0.75 0.1 175);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.99 0 0);
+  --sidebar-foreground: oklch(0.22 0.03 250);
+  --sidebar-primary: oklch(0.55 0.22 255);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.95 0.02 170);
+  --sidebar-accent-foreground: oklch(0.25 0.04 170);
+  --sidebar-border: oklch(0.92 0.01 250);
+  --sidebar-ring: oklch(0.55 0.22 255);
+}
+
+@theme inline {
+  --font-sans: 'Inter', 'Inter Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-dashboard-surface: #edf1f7;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ========== Receipt Ticket Styles ========== */
+.receipt-ticket {
+  width: 72mm;
+  max-width: 72mm;
+  padding: 0 3mm;
+  box-sizing: border-box;
+  background: white;
+  color: #000000;
+  font-size: 11px;
+  line-height: 1.25;
+  /* Nitidez extrema en pantalla */
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+}
+
+/* ========== Label Repair Template (2x1" 50.8mm x 25.4mm) ========== */
+.label-repair-template {
+  width: 50.8mm;
+  max-width: 50.8mm;
+  padding: 0.5mm 1.5mm 0.4mm 0.5mm;
+  background: white;
+  color: black;
+  font-size: 10px;
+  line-height: 1.2;
+  overflow: hidden;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ========== Product Sale Label Template (80mm thermal, exhibición) ========== */
+.product-sale-label-template {
+  width: 80mm;
+  max-width: 80mm;
+  padding: 6px 8px 8px;
+  background: white;
+  color: black;
+  font-size: 10px;
+  line-height: 1.4;
+  overflow: visible;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ========== Print Styles ========== */
+
+/* Ticket printing mode */
+.print-ticket-only {
+  @apply contents;
+}
+
+/* Label printing mode */
+.print-label-only {
+  @apply contents;
+}
+
+/* Capa térmica en modales (p. ej. POS): nunca display:none en pantalla — el motor de impresión a veces no pinta ese subárbol */
+.print-ticket-offscreen-layer {
+  position: fixed;
+  left: -9999px;
+  top: 0;
+  width: var(--pos-print-width-mm, 76mm);
+  max-width: var(--pos-print-width-mm, 76mm);
+  pointer-events: none;
+  opacity: 0;
+  z-index: -1;
+  overflow: visible;
+}
+
+/* Print styles - controlled by body classes */
+@media print {
+  .print-ticket-offscreen-layer {
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    z-index: 2147483647 !important;
+    overflow: visible !important;
+    pointer-events: none !important;
+    width: var(--pos-print-width-mm, 76mm) !important;
+    max-width: var(--pos-print-width-mm, 76mm) !important;
+  }
+
+  body.print-label-mode {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    display: block !important;
+  }
+
+  /* Si la etiqueta se abrió por error bajo /dashboard (compat), no imprimir chrome */
+  body.print-label-mode aside,
+  body.print-label-mode header {
+    display: none !important;
+  }
+
+  body.print-label-mode main {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+    display: block !important;
+    width: 100% !important;
+  }
+
+  /* Solo ocultar el resto cuando el body está en modo ticket/etiqueta (evita anular otras impresiones) */
+  body.print-ticket-mode *,
+  body.print-label-mode * {
+    visibility: hidden !important;
+  }
+  
+  body.print-ticket-mode .receipt-ticket,
+  body.print-ticket-mode .receipt-ticket * {
+    visibility: visible !important;
+  }
+  
+  body.print-label-mode .label-repair-template,
+  body.print-label-mode .label-repair-template * {
+    visibility: visible !important;
+  }
+
+  body.print-label-mode .product-sale-label-template,
+  body.print-label-mode .product-sale-label-template * {
+    visibility: visible !important;
+  }
+
+  body.print-ticket-mode .receipt-ticket {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    margin: 0 !important;
+    /* Área segura: 72mm — evita recorte en papel de 80mm */
+    width: 72mm !important;
+    max-width: 72mm !important;
+    padding: 0 3mm !important;
+    box-sizing: border-box !important;
+    background: white !important;
+    color: #000000 !important;
+    /* Nitidez extrema en impresión térmica */
+    -webkit-font-smoothing: none !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-rendering: optimizeSpeed !important;
+    image-rendering: pixelated !important;
+  }
+  
+  body.print-label-mode .label-repair-template {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: auto !important;
+    margin: 0 !important;
+    transform: translateX(0) !important;
+    width: 50.8mm !important;
+    max-width: 50.8mm !important;
+    height: 25.4mm !important;
+    overflow: hidden !important;
+    background: white !important;
+    color: black !important;
+    /* Nitidez extrema: sin suavizado para impresión térmica */
+    -webkit-font-smoothing: none !important;
+    -moz-osx-font-smoothing: unset !important;
+    text-rendering: optimizeSpeed !important;
+    image-rendering: pixelated !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body.print-label-mode .product-sale-label-template {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 80mm !important;
+    max-width: 80mm !important;
+    height: auto !important;
+    padding: 6px 8px 8px !important;
+    background: white !important;
+    color: black !important;
+    overflow: visible !important;
+    flex-shrink: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body.print-label-mode .venta-label,
+  body.print-label-mode .venta-label * {
+    visibility: visible !important;
+  }
+
+  body.print-label-mode .venta-label {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 50mm !important;
+    height: 25mm !important;
+    background: white !important;
+    color: black !important;
+    overflow: hidden !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Reporte ventas — Carta (membrete del taller) */
+  body.print-letter-report-mode * {
+    visibility: hidden !important;
+  }
+  body.print-letter-report-mode .reporte-ventas-carta,
+  body.print-letter-report-mode .reporte-ventas-carta * {
+    visibility: visible !important;
+  }
+  body.print-letter-report-mode .print-letter-report-offscreen {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    opacity: 1 !important;
+    z-index: 2147483646 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
+    pointer-events: none !important;
+    overflow: visible !important;
+  }
+  body.print-letter-report-mode .reporte-ventas-carta {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 7.5in !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    background: white !important;
+    color: #f8fafc !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+/* Capa oculta: reporte carta (misma idea que ticket térmico) */
+.print-letter-report-offscreen {
+  position: fixed;
+  left: -9999px;
+  top: 0;
+  width: 8.5in;
+  max-width: 8.5in;
+  pointer-events: none;
+  opacity: 0;
+  z-index: -1;
+  overflow: visible;
+}
+
+/* Márgenes de página en cero para impresión por defecto.
+   Las reglas @page específicas (tickets, etiquetas, carta) se inyectan
+   dinámicamente y deben poder anular este valor. */
+@page {
+  margin: 0;
+}
+
+/* ========== Custom Scrollbars (global) ========== */
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #94a3b8 transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8;
+}
+
+/* ========== Public tracking shake animation (accessibility-friendly) ========== */
+
+@keyframes shake-x {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-6px);
+  }
+  40%,
+  80% {
+    transform: translateX(6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-shake-x {
+    animation: none !important;
+  }
+}
+
+.animate-shake-x {
+  animation: shake-x 0.5s ease;
+}
+
+/* ========== Pulse ring para focus de buscador (active top bar) ==========
+ * Cuando una pagina interna (reparaciones, cotizaciones) pide enfocar el
+ * buscador del cliente activo, disparamos un pulso azul para que el usuario
+ * vea donde quedo el cursor. Respeta prefers-reduced-motion.
+ */
+
+@keyframes tc-pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.45);
+    border-color: rgb(96 165 250);
+  }
+  60% {
+    box-shadow: 0 0 0 14px rgba(59, 130, 246, 0);
+    border-color: rgb(59 130 246);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+    border-color: rgb(226 232 240);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-\[tc-pulse-ring_1\.6s_ease-out_1\] {
+    animation: none !important;
+  }
+}
+
+/* ========== Glow premium en botones primarios (pseudo-elemento) ========== */
+
+.btn-glow {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-glow::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  z-index: -1;
+  background: radial-gradient(
+    circle at center,
+    rgba(59, 130, 246, 0.35) 0%,
+    rgba(59, 130, 246, 0.08) 40%,
+    transparent 70%
+  );
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+}
+
+.btn-glow:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.25);
+}
+
+.btn-glow:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.btn-glow:active {
+  transform: translateY(0);
+}
+
+/* ========== Toast Sonner custom (light institutional pill) ========== */
+
+/* Sonner ya se estiliza vía toastOptions.classNames en components/ui/sonner.tsx.
+   No agregar CSS global aquí para evitar conflictos con !important de Sonner. */

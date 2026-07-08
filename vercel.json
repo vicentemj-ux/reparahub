@@ -1,0 +1,13 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/check-trials",
+      "schedule": "0 9 * * *"
+    },
+    {
+      "path": "/api/cron/urgent-equipment-report",
+      "schedule": "0 14 * * *"
+    }
+  ]
+}
+

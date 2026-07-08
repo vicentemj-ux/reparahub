@@ -1,0 +1,60 @@
+{
+  "name": "ReparaHub",
+  "short_name": "ReparaHub",
+  "description": "Software para talleres de reparacion con POS, inventario, caja y seguimiento de folios.",
+  "id": "/dashboard",
+  "start_url": "/dashboard",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#F5F7FA",
+  "theme_color": "#155EEF",
+  "prefer_related_applications": false,
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "es-MX",
+  "icons": [
+    {
+      "src": "/pwa-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "Abrir vista general del taller",
+      "url": "/dashboard",
+      "icons": [{ "src": "/pwa-icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Nueva reparacion",
+      "short_name": "Reparacion",
+      "description": "Crear un nuevo folio de reparacion",
+      "url": "/dashboard/reparaciones/nueva",
+      "icons": [{ "src": "/pwa-icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Inventario",
+      "short_name": "Inventario",
+      "description": "Abrir inventario del taller",
+      "url": "/dashboard/inventario",
+      "icons": [{ "src": "/pwa-icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Ventas POS",
+      "short_name": "POS",
+      "description": "Abrir punto de venta",
+      "url": "/dashboard/ventas",
+      "icons": [{ "src": "/pwa-icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

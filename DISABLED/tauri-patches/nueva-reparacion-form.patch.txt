@@ -1,0 +1,38 @@
+// [REPARAHUB-DESKTOP PATCH START v1]
+// --- Integracion Tauri (inyectada por reparahub-desktop) ------------
+// Este bloque reemplaza los stubs del SaaS con la implementacion real
+// para builds de escritorio. NO se commitea al SaaS — vive solo en disco
+// durante el ciclo de vida de la app Tauri.
+// Ver AGENTS.md ? "Tauri desktop fork (not in this repo)".
+// ---------------------------------------------------------------------
+const isTauriAvailable = async () =>
+  typeof window !== "undefined" &&
+  ("__TAURI_INTERNALS__" in window || "__TAURI__" in window)
+const isTauriDesktop = isTauriAvailable
+const domToPngBase64 = async (el, opts) => {
+  if (!(await isTauriAvailable()) || !el) return ""
+  try {
+    const mod = await import("html-to-image")
+    return await mod.toPng(el, {
+      pixelRatio: opts?.pixelRatio ?? 2,
+      cacheBust: true,
+    })
+  } catch (e) {
+    console.error("[reparahub-desktop] domToPngBase64 failed:", e)
+    return ""
+  }
+}
+const printEscposImage = async (printerName, base64, paperWidth) => {
+  if (!(await isTauriAvailable())) return
+  const tauri = window.__TAURI__
+  if (!tauri?.core?.invoke) return
+  await tauri.core.invoke("print_escpos_image", {
+    job: {
+      printerName,
+      base64,
+      paperWidth: paperWidth ?? 576,
+      copies: 1,
+    },
+  })
+}
+// [REPARAHUB-DESKTOP PATCH END v1]
