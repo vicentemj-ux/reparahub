@@ -7,7 +7,7 @@ This repo is prepared for a native Coolify deployment from Git.
 - App: Dockerfile build, Next.js standalone server on port `3000`.
 - Proxy/TLS: Coolify managed domains and certificates.
 - Database: Coolify PostgreSQL service.
-- Storage: Coolify MinIO/S3-compatible service.
+- Storage: MinIO/S3-compatible service deployed as a manual Docker Compose resource in Coolify.
 - Domains:
   - `https://reparahub.com` for the app.
   - `https://www.reparahub.com` redirect/alias.
@@ -28,6 +28,37 @@ NEXT_PUBLIC_APP_URL=https://reparahub.com
 S3_BUCKET=reparahub-app
 S3_PUBLIC_BASE_URL=https://media.reparahub.com/reparahub-app
 ```
+
+## MinIO manual setup in Coolify
+
+Coolify may not show MinIO as a one-click service. Use a Docker Compose resource instead:
+
+1. Create a new Resource > Docker Compose.
+2. Paste `infra/coolify/minio/docker-compose.yml`.
+3. Add these environment variables:
+
+```env
+MINIO_ROOT_USER=reparahub
+MINIO_ROOT_PASSWORD=<generate-a-long-secret>
+MINIO_SERVER_URL=https://media.reparahub.com
+MINIO_BROWSER_REDIRECT_URL=https://minio.reparahub.com
+```
+
+4. Expose port `9000` on `media.reparahub.com`.
+5. Optionally expose port `9001` on `minio.reparahub.com` for the admin console.
+6. Open the MinIO console and create bucket `reparahub-app`.
+7. Create an access key for the app and use it as:
+
+```env
+S3_ENDPOINT=https://media.reparahub.com
+S3_REGION=us-east-1
+S3_ACCESS_KEY_ID=<minio-access-key>
+S3_SECRET_ACCESS_KEY=<minio-secret-key>
+S3_BUCKET=reparahub-app
+S3_PUBLIC_BASE_URL=https://media.reparahub.com/reparahub-app
+```
+
+The app uses path-style S3 requests, so the public object URL is expected to be `https://media.reparahub.com/reparahub-app/<key>`.
 
 ## Postgres migration
 
