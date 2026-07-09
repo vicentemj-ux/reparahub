@@ -8,10 +8,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```bash
 # Desarrollo web (Next.js)
-pnpm dev            # Inicia servidor Next.js en localhost:3000
-pnpm build          # Build de producción Next.js
-pnpm start          # Sirve el build de producción
-pnpm lint           # ESLint sobre todo el proyecto
+npm run dev            # Inicia servidor Next.js en localhost:3000
+npm run build          # Build de producción Next.js
+npm start          # Sirve el build de producción
+npm run lint           # ESLint sobre todo el proyecto
 
 
 ```

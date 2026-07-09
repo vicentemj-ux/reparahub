@@ -15,16 +15,16 @@ Next.js 16 (App Router, RSC, Server Actions) · React 19 · TypeScript 5.7 (stri
 ## Commands
 
 ```bash
-pnpm dev              # Next.js dev (localhost:3000)
-pnpm build            # prisma generate && next build
-pnpm start            # serve production build
-pnpm lint             # ESLint
-pnpm test             # vitest run (utility tests in __tests__/)
-pnpm test:watch       # vitest watch mode
-pnpm version:bump patch|minor|major   # syncs package.json + CHANGELOG + git tag
+npm run dev              # Next.js dev (localhost:3000)
+npm run build            # prisma generate && next build
+npm start            # serve production build
+npm run lint             # ESLint
+npm test             # vitest run (utility tests in __tests__/)
+npm run test:watch       # vitest watch mode
+npm run version:bump -- patch|minor|major   # syncs package.json + CHANGELOG + git tag
 ```
 
-`pnpm build` **must** run `prisma generate` first — do not split them.
+`npm run build` **must** run `prisma generate` first — do not split them.
 
 ## Directory layout (real entrypoints)
 
@@ -172,4 +172,4 @@ Retiros actuales (jun 2026):
 - **`app/print-abono/[id]/page.tsx`** + **`getAbonoPrintData`** en `print-formatter-prisma.ts`: ruta huérfana y su Server Action. La impresión de abonos ocurre in-modal vía `useThermalTicketPrint`.
 - **`useThermalLabelPrint` + `THERMAL_LABEL_PAGE_STYLE`** en `print-config.ts`: helpers sin callers. `app/print-label/page.tsx` define su propio CSS inline.
 - **`scripts/prepare-tauri-server.js`**: script huérfano del fork desktop archivado.
-- **Dependencia `html-to-image`**: solo la consumían los parches Tauri. Eliminada de `package.json` y `pnpm-lock.yaml`.
+- **Dependencia `html-to-image`**: solo la consumían los parches Tauri. Eliminada de `package.json` y `package-lock.json`.

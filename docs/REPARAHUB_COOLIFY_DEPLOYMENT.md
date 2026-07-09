@@ -96,10 +96,10 @@ New uploads use `S3_*` variables. Existing absolute R2 URLs continue rendering d
 Run locally before pushing the deploy branch:
 
 ```bash
-pnpm lint
-pnpm exec tsc --noEmit
-pnpm test
-pnpm build
+npm run lint
+npx tsc --noEmit
+npm test
+npm run build
 ```
 
 Run after deploy:

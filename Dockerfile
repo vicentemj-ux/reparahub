@@ -1,14 +1,11 @@
 # syntax=docker/dockerfile:1
 
 FROM node:20-bookworm-slim AS base
-ENV PNPM_HOME="/pnpm"
-ENV PATH="$PNPM_HOME:$PATH"
-RUN corepack enable
 WORKDIR /app
 
 FROM base AS deps
-COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc ./
-RUN pnpm install --frozen-lockfile
+COPY package.json package-lock.json .npmrc ./
+RUN npm ci
 
 FROM base AS builder
 ENV NEXT_TELEMETRY_DISABLED=1
@@ -26,7 +23,7 @@ ENV NEXT_PUBLIC_APP_URL=$NEXT_PUBLIC_APP_URL
 ENV S3_PUBLIC_BASE_URL=$S3_PUBLIC_BASE_URL
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-RUN pnpm build
+RUN npm run build
 
 FROM node:20-bookworm-slim AS runner
 ENV NODE_ENV=production

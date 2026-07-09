@@ -17,10 +17,10 @@ Desplegar ReparaHub en Coolify usando app Dockerfile, PostgreSQL administrado po
 ## Gates
 
 ```bash
-pnpm lint
-pnpm exec tsc --noEmit
-pnpm test
-pnpm build
+npm run lint
+npx tsc --noEmit
+npm test
+npm run build
 ```
 
 ## Criterios globales

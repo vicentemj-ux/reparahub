@@ -173,7 +173,7 @@ reparahub/
 | Herramienta | Versión recomendada |
 |-------------|---------------------|
 | Node.js | 20 LTS o superior |
-| pnpm | 9.x (gestor de paquetes elegido) |
+| npm | 10.x (gestor de paquetes elegido) |
 | Git | 2.40+ |
 | PostgreSQL local o cuenta Supabase | 15+ |
 
@@ -187,7 +187,7 @@ cd reparahub
 ### 2. Instalar dependencias
 
 ```bash
-pnpm install
+npm install
 ```
 
 ### 3. Configurar variables de entorno
@@ -223,19 +223,19 @@ NEXT_PUBLIC_SUPABASE_INVENTORY_BUCKET=inventario
 
 ```bash
 # Genera el cliente (necesario antes del primer build)
-pnpm prisma generate
+npx prisma generate
 
 # Aplica las migraciones a la base de datos local/remota
-pnpm prisma migrate deploy
+npx prisma migrate deploy
 
 # (Opcional) Cargar datos de demostración
-pnpm prisma db seed
+npx prisma db seed
 ```
 
 ### 5. Levantar el servidor de desarrollo
 
 ```bash
-pnpm dev
+npm run dev
 ```
 
 La aplicación quedará disponible en `http://localhost:3000`.
@@ -243,18 +243,18 @@ La aplicación quedará disponible en `http://localhost:3000`.
 ### 6. Build de producción
 
 ```bash
-pnpm build     # ejecuta prisma generate && next build
-pnpm start
+npm run build     # ejecuta prisma generate && next build
+npm start
 ```
 
 ### Solución de problemas comunes
 
 | Problema | Solución |
 |----------|----------|
-| Error `PrismaClient is not generated` | `pnpm prisma generate` |
+| Error `PrismaClient is not generated` | `npx prisma generate` |
 | Error de conexión a Supabase | Verificar `DATABASE_URL` y que la IP esté permitida en el dashboard |
-| Build falla por RLS | Las políticas RLS están en `prisma/migrations/*/migration.sql`. Aplicar con `pnpm prisma migrate deploy` |
-| ESLint v10 vs `.eslintrc` | El proyecto aún usa config legacy; usar `pnpm lint` para invocarlo correctamente |
+| Build falla por RLS | Las políticas RLS están en `prisma/migrations/*/migration.sql`. Aplicar con `npx prisma migrate deploy` |
+| ESLint v10 vs `.eslintrc` | El proyecto aún usa config legacy; usar `npm run lint` para invocarlo correctamente |
 
 ---
 
@@ -384,13 +384,13 @@ Estas son las zonas que el equipo interno considera prioritarias para revisión 
 ## Scripts disponibles
 
 ```bash
-pnpm dev                 # Next.js dev server (localhost:3000)
-pnpm build               # prisma generate && next build
-pnpm start               # Producción
-pnpm lint                # ESLint
-pnpm prisma generate     # Regenerar cliente Prisma
-pnpm prisma migrate dev  # Crear/aplicar migración en desarrollo
-pnpm prisma studio       # UI para inspeccionar la base de datos
+npm run dev                 # Next.js dev server (localhost:3000)
+npm run build               # prisma generate && next build
+npm start               # Producción
+npm run lint                # ESLint
+npx prisma generate     # Regenerar cliente Prisma
+npx prisma migrate dev  # Crear/aplicar migración en desarrollo
+npx prisma studio       # UI para inspeccionar la base de datos
 ```
 
 ---
